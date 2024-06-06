@@ -19,7 +19,7 @@ TEST(TextRestricterTests, CurseRestrictionStrategyTest) {
 TEST(TextRestricterTests, LengthRestrictionStrategyTest) {
     TextRestricter textRestricter(std::make_unique<LengthRestrictionStrategy>(5, 10));
     std::string concatedText;
-    EXPECT_FALSE(textRestricter.ConcatText("short", "text", concatedText));
+    EXPECT_TRUE(textRestricter.ConcatText("short", "text", concatedText));
     EXPECT_TRUE(textRestricter.ConcatText("good", " text", concatedText));
     EXPECT_EQ(concatedText, "good text");
     EXPECT_FALSE(textRestricter.ConcatText("thisis", "toolong", concatedText));
