@@ -1,5 +1,5 @@
 #include <gtest/gtest.h>
-#include "text_restricter.cpp" // Include the original implementation file
+#include "text_restricter.h" // Include the original implementation file
 
 TEST(TextRestricterTests, NoRestrictionStrategyTest) {
     TextRestricter textRestricter(std::make_unique<NoRestrictionStrategy>());
