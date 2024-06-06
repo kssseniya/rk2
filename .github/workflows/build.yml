@@ -24,6 +24,12 @@ jobs:
         cd build
         ./tests
 
+    - name: Compile
+      run: g++ -std=c++20 text_restricter.cpp -o text_restricter
+
+    - name: Run text_restricter.cpp
+      run: ./text_restricter
+
     - name: Upload artifact
       uses: actions/upload-artifact@v2
       with:
